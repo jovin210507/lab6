@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Northbridge Institute of Technology | Admissions 2027</title>
+
+<!-- External CSS: web fonts loaded from Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Libre+Franklin:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --navy: #14213d;
+    --ink: #1d2433;
+    --paper: #ffffff;
+    --muted: #5b6475;
+    --accent: #b8860b;
+    --rule: #d6dae1;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    font-family: "Libre Franklin", Arial, sans-serif;
+    color: var(--ink);
+    line-height: 1.65;
+    /* Online background image (Unsplash) with a navy overlay; solid colour is the fallback */
+    background-color: var(--navy);
+    background-image:
+      linear-gradient(rgba(20, 33, 61, 0.78), rgba(20, 33, 61, 0.9)),
+      url("https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  a { color: inherit; }
+  a:focus-visible { outline: 3px solid #f2c94c; outline-offset: 3px; }
+
+  /* Top bar */
+  .topbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 20px 24px;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  .brand {
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+    text-decoration: none;
+  }
+  .topbar nav { display: flex; gap: 24px; font-size: 0.92rem; }
+  .topbar nav a { text-decoration: none; opacity: 0.9; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+  .topbar nav a:hover { opacity: 1; border-bottom-color: #f2c94c; }
+
+  /* Hero */
+  .hero {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 88px 24px 72px;
+    color: #fff;
+  }
+  .hero h1 {
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-weight: 700;
+    font-size: clamp(2.1rem, 5vw, 3.4rem);
+    line-height: 1.2;
+    margin: 0 0 18px;
+    max-width: 17em;
+    padding-left: 22px;
+    border-left: 5px solid #f2c94c;   /* border on text */
+  }
+  .hero p {
+    max-width: 38em;
+    margin: 0 0 0 27px;
+    font-size: 1.1rem;
+    color: #e6eaf2;
+  }
+
+  /* Content panels */
+  main { max-width: 1040px; margin: 0 auto; padding: 0 24px 56px; }
+
+  .panel {
+    background: var(--paper);
+    padding: 32px 36px;
+    margin-bottom: 28px;
+    border-radius: 4px;
+  }
+  .panel h2 {
+    font-family: "Libre Baskerville", Georgia, serif;
+    color: var(--navy);
+    font-size: 1.5rem;
+    margin: 0 0 14px;
+  }
+  .panel p { margin: 0 0 12px; color: #333b4d; max-width: 46em; }
+
+  /* Different border treatments for each text block */
+  .about    { border-top: 5px solid var(--navy); }
+  .programs { border: 1px solid var(--rule); border-left: 6px solid var(--accent); }
+  .admit    { border: 2px solid var(--navy); }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 18px;
+  }
+  .course {
+    padding: 16px 18px;
+    border: 1px solid var(--rule);
+    border-bottom: 3px solid var(--navy);
+    background: #f7f8fa;
+  }
+  .course h3 { margin: 0 0 4px; font-size: 1rem; color: var(--navy); }
+  .course p  { margin: 0; font-size: 0.92rem; color: var(--muted); }
+
+  .dates { margin: 14px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--rule); }
+  .dates li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .dates strong { color: var(--accent); font-weight: 600; }
+
+  footer {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 22px 24px 40px;
+    color: #cfd6e4;
+    font-size: 0.85rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 56px 20px 48px; }
+    .panel { padding: 24px 20px; }
+    .dates li { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">Northbridge Institute of Technology</a>
+  <nav aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#programmes">Programmes</a>
+    <a href="#admissions">Admissions</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <h1>Engineering and science education built around real projects</h1>
+  <p>Small classes, working laboratories and faculty who have spent time in industry.
+     Applications for the 2027 intake are now open.</p>
+</section>
+
+<main>
+  <section class="panel about" id="about">
+    <h2>About the Institute</h2>
+    <p>Founded in 1984, Northbridge Institute of Technology offers undergraduate and
+       postgraduate programmes across engineering, computing and applied sciences.
+       Every student completes a supervised project with an industry or research partner
+       before graduating.</p>
+    <p>The campus has twelve laboratories, a central library open until midnight and
+       on-site accommodation for 1,800 students.</p>
+  </section>
+
+  <section class="panel programs" id="programmes">
+    <h2>Programmes</h2>
+    <p>Four-year undergraduate degrees and two-year master's programmes.</p>
+    <div class="grid">
+      <div class="course"><h3>B.Tech Computer Science</h3><p>Algorithms, systems, data and software engineering.</p></div>
+      <div class="course"><h3>B.Tech Electronics</h3><p>Embedded systems, signal processing and VLSI.</p></div>
+      <div class="course"><h3>B.Tech Mechanical</h3><p>Design, thermal systems and manufacturing.</p></div>
+      <div class="course"><h3>M.Sc Data Science</h3><p>Statistics, machine learning and applied analytics.</p></div>
+    </div>
+  </section>
+
+  <section class="panel admit" id="admissions">
+    <h2>Admissions 2027</h2>
+    <p>Apply online and upload your academic records. Shortlisted candidates are invited to an interview.</p>
+    <ul class="dates">
+      <li><span>Applications open</span><strong>1 December 2026</strong></li>
+      <li><span>Last date to apply</span><strong>28 February 2027</strong></li>
+      <li><span>Interviews</span><strong>March 2027</strong></li>
+      <li><span>Classes begin</span><strong>1 August 2027</strong></li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  Northbridge Institute of Technology &middot; 45 College Avenue, Northbridge &middot; admissions@northbridge.example<br>
+  Background photo: Unsplash. Institute name and details are placeholders.
+</footer>
+
+</body>
+</html>
